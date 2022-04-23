@@ -8,6 +8,7 @@
         password=postgres
         user=postgres
         db=postgres
+        port=5432
     * ./gradlew clean build
     * docker-compose up --build
     
