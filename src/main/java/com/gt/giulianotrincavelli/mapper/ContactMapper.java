@@ -1,8 +1,8 @@
 package com.gt.giulianotrincavelli.mapper;
 
 import com.gt.giulianotrincavelli.model.Contact;
-import com.gt.giulianotrincavelli.model.request.ContactRQ;
-import com.gt.giulianotrincavelli.model.response.ContactRS;
+import com.gt.giulianotrincavelli.controller.request.ContactRQ;
+import com.gt.giulianotrincavelli.controller.response.ContactRS;
 import org.springframework.stereotype.Component;
 
 @Component

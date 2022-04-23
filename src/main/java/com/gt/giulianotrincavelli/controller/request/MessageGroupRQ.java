@@ -1,4 +1,4 @@
-package com.gt.giulianotrincavelli.model.request;
+package com.gt.giulianotrincavelli.controller.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

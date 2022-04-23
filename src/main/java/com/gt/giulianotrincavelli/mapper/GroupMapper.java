@@ -1,8 +1,8 @@
 package com.gt.giulianotrincavelli.mapper;
 
 import com.gt.giulianotrincavelli.model.Group;
-import com.gt.giulianotrincavelli.model.request.GroupRQ;
-import com.gt.giulianotrincavelli.model.response.GroupRS;
+import com.gt.giulianotrincavelli.controller.request.GroupRQ;
+import com.gt.giulianotrincavelli.controller.response.GroupRS;
 import org.springframework.stereotype.Component;
 
 @Component

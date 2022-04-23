@@ -2,8 +2,8 @@ package com.gt.giulianotrincavelli.service;
 
 import com.gt.giulianotrincavelli.mapper.MessageMapper;
 import com.gt.giulianotrincavelli.model.Message;
-import com.gt.giulianotrincavelli.model.request.MessageRQ;
-import com.gt.giulianotrincavelli.model.response.MessageRS;
+import com.gt.giulianotrincavelli.controller.request.MessageRQ;
+import com.gt.giulianotrincavelli.controller.response.MessageRS;
 import com.gt.giulianotrincavelli.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,10 +1,12 @@
-package com.gt.giulianotrincavelli.model.request;
+package com.gt.giulianotrincavelli.controller.response;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @AllArgsConstructor
 @Data
-public class MessageRQ {
+@Builder
+public class MessageRS {
     private final String message;
 }

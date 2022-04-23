@@ -1,8 +1,8 @@
 package com.gt.giulianotrincavelli.mapper;
 
 import com.gt.giulianotrincavelli.model.Message;
-import com.gt.giulianotrincavelli.model.request.MessageRQ;
-import com.gt.giulianotrincavelli.model.response.MessageRS;
+import com.gt.giulianotrincavelli.controller.request.MessageRQ;
+import com.gt.giulianotrincavelli.controller.response.MessageRS;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;

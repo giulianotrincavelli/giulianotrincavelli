@@ -1,8 +1,8 @@
 package com.gt.giulianotrincavelli.controller;
 
-import com.gt.giulianotrincavelli.model.request.ContactGroupRQ;
-import com.gt.giulianotrincavelli.model.request.GroupRQ;
-import com.gt.giulianotrincavelli.model.response.GroupRS;
+import com.gt.giulianotrincavelli.controller.request.ContactGroupRQ;
+import com.gt.giulianotrincavelli.controller.request.GroupRQ;
+import com.gt.giulianotrincavelli.controller.response.GroupRS;
 import com.gt.giulianotrincavelli.service.GroupService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

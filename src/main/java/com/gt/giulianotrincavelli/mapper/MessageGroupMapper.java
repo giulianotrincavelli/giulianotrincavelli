@@ -2,9 +2,9 @@ package com.gt.giulianotrincavelli.mapper;
 
 import com.gt.giulianotrincavelli.model.MessageGroup;
 import com.gt.giulianotrincavelli.model.ReadyMessageGroup;
-import com.gt.giulianotrincavelli.model.response.FullMessageGroupRS;
-import com.gt.giulianotrincavelli.model.response.MessageGroupRS;
-import com.gt.giulianotrincavelli.model.response.ReadyMessageGroupRS;
+import com.gt.giulianotrincavelli.controller.response.FullMessageGroupRS;
+import com.gt.giulianotrincavelli.controller.response.MessageGroupRS;
+import com.gt.giulianotrincavelli.controller.response.ReadyMessageGroupRS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

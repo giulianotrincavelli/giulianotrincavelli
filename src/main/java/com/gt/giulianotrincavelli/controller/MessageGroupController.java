@@ -1,10 +1,10 @@
 package com.gt.giulianotrincavelli.controller;
 
-import com.gt.giulianotrincavelli.model.request.MessageGroupRQ;
-import com.gt.giulianotrincavelli.model.request.ReadyMessageGroupRQ;
-import com.gt.giulianotrincavelli.model.response.FullMessageGroupRS;
-import com.gt.giulianotrincavelli.model.response.MessageGroupRS;
-import com.gt.giulianotrincavelli.model.response.ReadyMessageGroupRS;
+import com.gt.giulianotrincavelli.controller.request.MessageGroupRQ;
+import com.gt.giulianotrincavelli.controller.request.ReadyMessageGroupRQ;
+import com.gt.giulianotrincavelli.controller.response.FullMessageGroupRS;
+import com.gt.giulianotrincavelli.controller.response.MessageGroupRS;
+import com.gt.giulianotrincavelli.controller.response.ReadyMessageGroupRS;
 import com.gt.giulianotrincavelli.service.MessageGroupService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

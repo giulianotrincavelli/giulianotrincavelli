@@ -1,4 +1,4 @@
-package com.gt.giulianotrincavelli.model.response;
+package com.gt.giulianotrincavelli.controller.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

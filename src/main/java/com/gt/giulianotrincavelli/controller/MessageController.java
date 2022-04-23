@@ -1,7 +1,7 @@
 package com.gt.giulianotrincavelli.controller;
 
-import com.gt.giulianotrincavelli.model.request.MessageRQ;
-import com.gt.giulianotrincavelli.model.response.MessageRS;
+import com.gt.giulianotrincavelli.controller.request.MessageRQ;
+import com.gt.giulianotrincavelli.controller.response.MessageRS;
 import com.gt.giulianotrincavelli.service.MessageService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

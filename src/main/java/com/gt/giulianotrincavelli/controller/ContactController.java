@@ -1,7 +1,7 @@
 package com.gt.giulianotrincavelli.controller;
 
-import com.gt.giulianotrincavelli.model.request.ContactRQ;
-import com.gt.giulianotrincavelli.model.response.ContactRS;
+import com.gt.giulianotrincavelli.controller.request.ContactRQ;
+import com.gt.giulianotrincavelli.controller.response.ContactRS;
 import com.gt.giulianotrincavelli.service.ContactService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
