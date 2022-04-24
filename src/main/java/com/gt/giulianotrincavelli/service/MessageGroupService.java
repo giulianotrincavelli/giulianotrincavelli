@@ -61,7 +61,7 @@ public class MessageGroupService {
         Optional<MessageGroup> messageGroupOptional = messageGroupRepository.findByMessage(message);
 
         if (messageGroupOptional.isEmpty()) {
-            log.error("Message {} not found", messageKey);
+            log.error("Message {} in group not found", messageKey);
 
             throw new InternalError();
         }
@@ -103,7 +103,7 @@ public class MessageGroupService {
         Optional<ReadyMessageGroup> readyMessageGroupOptional = readyMessageGroupRepository.findByContactAndMessageGroup(contact, messageGroup);
 
         if (readyMessageGroupOptional.isPresent()) {
-            log.error("Message {} of group {} has already for contact {}", messageKey, group.getName(), contact.getPhone());
+            log.error("Message {} of group {} has already exists for contact {}", messageKey, group.getName(), contact.getPhone());
 
             throw new InternalError();
         }
@@ -161,7 +161,7 @@ public class MessageGroupService {
                 .phone(contact.getPhone()).build();
 
         try {
-            /*Lo deje comentado porque no me funciona el producer local
+            /*Lo deje comentado porque no me funciona el consumer local
              La idea era mandar por kafka el mensaje, y que la logica del lado del
              consumer, chequee que el contacto tenga acceso al grupo para recibir la
              notificacion

@@ -23,6 +23,8 @@ public class MessageController {
 
     @PostMapping("/save")
     ResponseEntity<MessageRS> save(@RequestBody MessageRQ messageRQ) {
+        log.info("POST /messages/save. Body {}", messageRQ);
+
         MessageRS messageRS = service.save(messageRQ);
 
         return status(HttpStatus.OK).body(messageRS);

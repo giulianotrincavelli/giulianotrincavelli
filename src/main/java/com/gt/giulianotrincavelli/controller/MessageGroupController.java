@@ -10,11 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.ResponseEntity.status;
 
@@ -25,8 +21,10 @@ public class MessageGroupController {
     @Autowired
     private MessageGroupService service;
 
-    @GetMapping()
-    ResponseEntity<FullMessageGroupRS> get(String messageKey) {
+    @GetMapping("/{messageKey}")
+    ResponseEntity<FullMessageGroupRS> get(@PathVariable String messageKey) {
+        log.info("GET /messages-group. Message key {}", messageKey);
+
         FullMessageGroupRS fullMessageGroupRS = service.getByMessageKey(messageKey);
 
         return status(HttpStatus.OK).body(fullMessageGroupRS);
@@ -34,6 +32,8 @@ public class MessageGroupController {
 
     @PostMapping("/mark-as-ready")
     ResponseEntity<ReadyMessageGroupRS> markAsReady(@RequestBody ReadyMessageGroupRQ readyMessageGroupRQ) {
+        log.info("POST /messages-group/mark-as-ready. Body {}", readyMessageGroupRQ);
+
         ReadyMessageGroupRS readyMessageGroup = service.markAsReady(readyMessageGroupRQ);
 
         return status(HttpStatus.OK).body(readyMessageGroup);
@@ -41,6 +41,8 @@ public class MessageGroupController {
 
     @PostMapping("/save")
     ResponseEntity<MessageGroupRS> save(@RequestBody MessageGroupRQ messageGroupRQ) {
+        log.info("POST /messages-group/save. Body {}", messageGroupRQ);
+
         MessageGroupRS messageGroupRS = service.save(messageGroupRQ);
 
         return status(HttpStatus.OK).body(messageGroupRS);

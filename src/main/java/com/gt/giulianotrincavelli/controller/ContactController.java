@@ -23,6 +23,8 @@ public class ContactController {
 
     @PostMapping("/save")
     ResponseEntity<ContactRS> save(@RequestBody ContactRQ contact) {
+        log.info("POST /contacts/save. Body {}", contact);
+
         ContactRS contactRS = service.save(contact);
 
         return status(HttpStatus.OK).body(contactRS);

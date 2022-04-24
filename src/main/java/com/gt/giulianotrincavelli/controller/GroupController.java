@@ -24,6 +24,8 @@ public class GroupController {
 
     @PostMapping("/save")
     ResponseEntity<GroupRS> save(@RequestBody GroupRQ groupRQ) {
+        log.info("POST /groups/save. Body {}", groupRQ);
+
         GroupRS groupRS = service.save(groupRQ);
 
         return status(HttpStatus.OK).body(groupRS);
@@ -31,6 +33,8 @@ public class GroupController {
 
     @PostMapping("/add-contact")
     ResponseEntity<GroupRS> add(@RequestBody ContactGroupRQ contactGroupRQ) {
+        log.info("POST /groups/add-contact. Body {}", contactGroupRQ);
+
         GroupRS groupRS = service.add(contactGroupRQ);
 
         return status(HttpStatus.OK).body(groupRS);
