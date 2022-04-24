@@ -5,12 +5,14 @@ import com.gt.giulianotrincavelli.model.Contact;
 import com.gt.giulianotrincavelli.controller.request.ContactRQ;
 import com.gt.giulianotrincavelli.controller.response.ContactRS;
 import com.gt.giulianotrincavelli.repository.ContactRepository;
+import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@Builder
 public class ContactService {
 
     @Autowired
