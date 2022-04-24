@@ -2,7 +2,13 @@ package com.gt.giulianotrincavelli.service;
 
 import com.gt.giulianotrincavelli.kafka.producer.MessageProducer;
 import com.gt.giulianotrincavelli.mapper.MessageGroupMapper;
-import com.gt.giulianotrincavelli.model.*;
+import com.gt.giulianotrincavelli.model.Message;
+import com.gt.giulianotrincavelli.model.MessageGroup;
+import com.gt.giulianotrincavelli.model.Contact;
+import com.gt.giulianotrincavelli.model.ContactGroup;
+import com.gt.giulianotrincavelli.model.Group;
+import com.gt.giulianotrincavelli.model.ReadyMessageGroup;
+import com.gt.giulianotrincavelli.model.Event;
 import com.gt.giulianotrincavelli.controller.request.MessageGroupRQ;
 import com.gt.giulianotrincavelli.controller.request.ReadyMessageGroupRQ;
 import com.gt.giulianotrincavelli.controller.response.FullMessageGroupRS;
@@ -155,6 +161,12 @@ public class MessageGroupService {
                 .phone(contact.getPhone()).build();
 
         try {
+            /*Lo deje comentado porque no me funciona el producer local
+             La idea era mandar por kafka el mensaje, y que la logica del lado del
+             consumer, chequee que el contacto tenga acceso al grupo para recibir la
+             notificacion
+            */
+
             //messageProducer.sendMessage(event, "test_topic");
         } catch (Exception e) {
             log.error("Cannot send notification");
